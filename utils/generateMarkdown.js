@@ -24,6 +24,7 @@ function generateMarkdown(data) {
   ## Usage
   
   ${data.usageInstructions}
+  The application will be ran with the following command(s):
   \`\`\`sh
   ${data.usageCommands}
   \`\`\`

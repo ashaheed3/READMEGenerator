@@ -15,9 +15,9 @@ function questions(){
           name: "username",
           message: "What is your GitHub username?"
         },
-        }
+        {
           type: "input",
-          name: "personalToken"
+          name: "personalToken",
           message: "What is your GitHub personal access token?"
         },
         {
