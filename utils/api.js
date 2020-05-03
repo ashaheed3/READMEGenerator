@@ -6,14 +6,14 @@ const appendFileAsync = util.promisify(fs.appendFile);
 
 
 const api = {
-  getUser(username) {
+  getUser(username, personalToken) {
 
     
 
       axios
         .get(`https://api.github.com/users/${username}`,{
           headers: {
-            authorization: `token a2047bb301c89f60ed68464e4d2f474cd355f255`
+            authorization: `token ${personalToken}`
           }
         })
         .then(function(data) {
