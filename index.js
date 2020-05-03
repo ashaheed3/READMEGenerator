@@ -15,6 +15,11 @@ function questions(){
           name: "username",
           message: "What is your GitHub username?"
         },
+        }
+          type: "input",
+          name: "personalToken"
+          message: "What is your GitHub personal access token?"
+        },
         {
           type: "input",
           name: "title",
@@ -67,7 +72,7 @@ function init() {
         const readme = generateMarkdown(answers);
     
          writeFileAsync("README.md", readme);
-         api.getUser(answers.username);
+         api.getUser(answers.username, answers.personalToken);
       })
       .then(function() {
         console.log("Successfully wrote to README.md");
