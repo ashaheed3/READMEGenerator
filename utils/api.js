@@ -21,7 +21,10 @@ const api = {
             const questions = 
               `## Questions
               Have a question? Shoot me an email
-              Email: [${data.data.email}](mailto:${data.data.email})\n![Image of User](${data.data.avatar_url})`;
+
+              Email: [${data.data.email}](mailto:${data.data.email})
+              
+              ![Image of User](${data.data.avatar_url})`;
 
               try{
                 appendFileAsync("README.md", questions);
