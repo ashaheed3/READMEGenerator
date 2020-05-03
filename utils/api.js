@@ -11,10 +11,17 @@ const api = {
     
 
       axios
-        .get(`https://api.github.com/users/${username}`)
+        .get(`https://api.github.com/users/${username}`,{
+          headers: {
+            authorization: `token 28a23795e243f69a7e167b577da7b651baa7bdab`
+          }
+        })
         .then(function(data) {
+          console.log(data)
             const questions = 
-              `## Questions\nHave a question? Shoot me an email\nEmail: [${data.email}](mailto:${data.email})\n![Image of User](${data.avatar})`;
+              `## Questions
+              Have a question? Shoot me an email
+              Email: [${data.data.email}](mailto:${data.data.email})\n![Image of User](${data.data.avatar_url})`;
 
               try{
                 appendFileAsync("README.md", questions);

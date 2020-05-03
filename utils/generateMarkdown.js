@@ -23,7 +23,7 @@ function generateMarkdown(data) {
   \`\`\`
   ## Usage
   
-  ${data.usageInstrutions}
+  ${data.usageInstructions}
   \`\`\`sh
   ${data.usageCommands}
   \`\`\`
