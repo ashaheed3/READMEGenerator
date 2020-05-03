@@ -13,11 +13,11 @@ const api = {
       axios
         .get(`https://api.github.com/users/${username}`,{
           headers: {
-            authorization: `token 28a23795e243f69a7e167b577da7b651baa7bdab`
+            authorization: `token a2047bb301c89f60ed68464e4d2f474cd355f255`
           }
         })
         .then(function(data) {
-          console.log(data)
+          
             const questions = 
               `## Questions
               Have a question? Shoot me an email
@@ -28,6 +28,8 @@ const api = {
               }catch(err) {
                 console.log(err);
               }
+
+              
 
         });
 
