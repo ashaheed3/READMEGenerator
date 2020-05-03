@@ -32,15 +32,9 @@ function generateMarkdown(data) {
   ${data.contributing}
   
   ## Tests
-  
+  \`\`\`sh
   ${data.tests}
-  
-  ## Questions
-  Have a question? Shoot me an email
-  
-  Email: [$data.email](mailto:${data.email})
-  
-  ![Image of User](${data.avatar})
+  \`\`\`
 
 `;
 }
