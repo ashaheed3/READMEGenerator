@@ -1,3 +1,4 @@
+const dotenv = require("dotenv").config();
 const axios = require("axios");
 const fs = require("fs");
 const util = require("util");
@@ -15,7 +16,7 @@ const api = {
       axios
         .get(`https://api.github.com/users/${username}`,{
           headers: {
-            authorization: `token ${personalToken}`
+            authorization: `token ${process.env.ACCESS_TOKEN}`
           }
         })
         .then(function(data) {
